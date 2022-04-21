@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>customer_order_ilia.Domain</RootNamespace>
+  </PropertyGroup>
+
+</Project>
