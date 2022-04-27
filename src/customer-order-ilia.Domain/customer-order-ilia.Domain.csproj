@@ -5,4 +5,16 @@
     <RootNamespace>customer_order_ilia.Domain</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="Repositories\" />
+    <None Remove="Service\" />
+    <None Remove="Interface\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Service\" />
+    <Folder Include="Interface\" />
+  </ItemGroup>
 </Project>

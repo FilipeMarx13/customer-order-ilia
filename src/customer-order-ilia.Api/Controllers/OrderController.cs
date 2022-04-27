@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Threading.Tasks;
+using customer_order_ilia.Application.Interfaces;
+using customer_order_ilia.Application.Models;
+using customer_order_ilia.Infrastructure.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace customer_order_ilia.Api.Controllers
@@ -10,38 +14,35 @@ namespace customer_order_ilia.Api.Controllers
     [Route("customer-order-ilia/order")]
     public class OrderController : ControllerBase
     {
-        public OrderController()
+        private readonly IOrderApplication _orderApplication;
+        private readonly IOrderReadRepository _orderReadRepository;
+        public OrderController(IOrderApplication orderApplication, IOrderReadRepository orderReadRepository)
         {
-        }
-
-        [HttpGet]
-        public IActionResult Get()
-        {
-            return Ok();
-        }
-
-        [HttpGet("{id}")]
-        public IActionResult Get(Guid id)
-        {
-            return Ok();
+            _orderApplication = orderApplication;
+            _orderReadRepository = orderReadRepository;
         }
 
         [HttpPost]
-        public IActionResult Post()
+        public async Task<IActionResult> Post(OrderInputModel orderInputModel)
         {
-            return Ok();
+            var order = await _orderApplication.AddNewOrder(orderInputModel);            
+            return Ok(order);
         }
 
-        [HttpPut]
-        public IActionResult Put()
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
         {
-            return Ok();
+            var orders = await _orderReadRepository.GetAll();
+            return Ok(orders);
         }
 
-        [HttpDelete]
-        public IActionResult Delete()
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(Guid id)
         {
-            return Ok();
+            var orders = await _orderReadRepository.GetById(id);
+            if(orders == null)
+                return NotFound();
+            return Ok(orders);
         }
     }
 }
