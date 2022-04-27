@@ -5,4 +5,26 @@
     <RootNamespace>customer_order_ilia.Infrastructure</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Context\" />
+    <None Remove="Repositories\" />
+    <None Remove="Mapping\" />
+    <None Remove="AutoMapper" />
+    <None Remove="Models\" />
+    <None Remove="Interface\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Context\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="Models\" />
+    <Folder Include="Interface\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\customer-order-ilia.Domain\customer-order-ilia.Domain.csproj" />
+    <ProjectReference Include="..\customer-order-ilia.Application\customer-order-ilia.Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+  </ItemGroup>
 </Project>

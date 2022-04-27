@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "customer-order-ilia.Applica
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "customer-order-ilia.Infrastructure", "customer-order-ilia.Infrastructure\customer-order-ilia.Infrastructure.csproj", "{A9897576-0DC8-46ED-BB14-CF3324216B84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "customer-order-ilia.CrossCutting", "customer-order-ilia.CrossCutting\customer-order-ilia.CrossCutting.csproj", "{F85D83D9-52BB-4CCC-881A-734EF5F9E5B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A9897576-0DC8-46ED-BB14-CF3324216B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9897576-0DC8-46ED-BB14-CF3324216B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9897576-0DC8-46ED-BB14-CF3324216B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F85D83D9-52BB-4CCC-881A-734EF5F9E5B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F85D83D9-52BB-4CCC-881A-734EF5F9E5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F85D83D9-52BB-4CCC-881A-734EF5F9E5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F85D83D9-52BB-4CCC-881A-734EF5F9E5B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
