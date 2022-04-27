@@ -26,7 +26,7 @@ namespace customer_order_ilia.Tests.Domain.Service
             _customerRepositoryMock = new Mock<ICustomerRepository>();
             _customerReadRepositoryMock = new Mock<ICustomerReadRepository>();
             return new CustomerService(
-                _customerRepositoryMock.Object, _customerReadRepositoryMock);
+                _customerRepositoryMock.Object);
         }
 
         [Fact]
@@ -49,23 +49,5 @@ namespace customer_order_ilia.Tests.Domain.Service
             _customerRepositoryMock.Verify(x => x.Add(customer), Times.Once);
         }
 
-        [Fact]
-        public async void WhenTryToUpdateNonexistentCutomer_ThenNotFoud()
-        {
-            //Arrange
-            var service = GetService();
-            var name = "John Mayer";
-            var email = "JohnMayer@world.com";
-            var oldCustomer = new Customer("John Lennon", "JohnLennon@world.com");
-            var newCustomer = new Customer(name, email);
-
-            _customerRepositoryMock.Verify(x => x.GetById(It.IsAny<Guid>()));
-
-            //Act
-            var customer = await service.UpdateCustomer(newCustomer);
-
-            //Assert
-
-        }
     }
 }

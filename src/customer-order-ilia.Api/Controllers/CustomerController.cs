@@ -17,16 +17,12 @@ namespace customer_order_ilia.Api.Controllers
     public class CustomerController : ControllerBase
     {
         private readonly ICustomerReadRepository _customerReadRepository;
-        private readonly ICustomerRepository _customerRepository;
         private readonly ICustomerApplication _customerApplication;
-        private readonly IMapper _mapper;
 
-        public CustomerController(ICustomerReadRepository customerReadRepository, ICustomerApplication customerApplication, ICustomerRepository customerRepository, IMapper mapper)
+        public CustomerController(ICustomerReadRepository customerReadRepository, ICustomerApplication customerApplication)
         {
             _customerReadRepository = customerReadRepository;
             _customerApplication = customerApplication;
-            _customerRepository = customerRepository;
-            _mapper = mapper;
         }
         [HttpGet]
         public async Task<IActionResult> GetAll()
