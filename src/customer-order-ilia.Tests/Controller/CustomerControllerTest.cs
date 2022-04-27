@@ -46,6 +46,20 @@ namespace customer_order_ilia.Tests.Controller
         }
 
         [Fact]
+        public async Task WhenGetCustomer_ReturnNotFound()
+        {
+            //Arrange
+            var service = GetController();
+            var guid = Guid.NewGuid();
+            
+            //Act
+            var result = await service.Get(guid);
+
+            //Assert
+            Assert.IsType<NotFoundResult>(result);
+        }
+
+        [Fact]
         public async Task WhenGetCustomerList_ReturnSuccess()
         {
             //Arrange
