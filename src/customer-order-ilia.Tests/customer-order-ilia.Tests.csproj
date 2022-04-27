@@ -28,11 +28,13 @@
     <None Remove="Domain\" />
     <None Remove="Domain\Entities\" />
     <None Remove="Domain\Service\" />
+    <None Remove="Controller\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domain\" />
     <Folder Include="Domain\Entities\" />
     <Folder Include="Domain\Service\" />
+    <Folder Include="Controller\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\customer-order-ilia.Api\customer-order-ilia.Api.csproj" />
