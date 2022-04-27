@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using customer_order_ilia.Domain.Entities;
 
 namespace customer_order_ilia.Infrastructure.Context
 {
+    [ExcludeFromCodeCoverage]
     public class DataBase
     {
         private static DataBase _instance;
