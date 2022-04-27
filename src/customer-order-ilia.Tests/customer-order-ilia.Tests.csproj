@@ -25,5 +25,18 @@
   <ItemGroup>
     <None Remove="Moq" />
     <None Remove="AutoMapper" />
+    <None Remove="Domain\" />
+    <None Remove="Domain\Entities\" />
+    <None Remove="Domain\Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\" />
+    <Folder Include="Domain\Entities\" />
+    <Folder Include="Domain\Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\customer-order-ilia.Api\customer-order-ilia.Api.csproj" />
+    <ProjectReference Include="..\customer-order-ilia.Application\customer-order-ilia.Application.csproj" />
+    <ProjectReference Include="..\customer-order-ilia.Domain\customer-order-ilia.Domain.csproj" />
   </ItemGroup>
 </Project>
